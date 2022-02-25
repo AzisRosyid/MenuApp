@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:strokeColor="#999"
+    app:strokeWidth="1dp"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/imgMenu"
+            android:src="@drawable/ic_baseline_restaurant_menu_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameMenu"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp"
+            android:text="Menu Name"
+            app:layout_constraintStart_toEndOf="@id/imgMenu"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/priceMenu"
+            android:text="Price"
+            android:textSize="14sp"
+            android:textColor="@color/purple_200"
+            app:layout_constraintTop_toBottomOf="@id/nameMenu"
+            app:layout_constraintStart_toStartOf="@id/nameMenu"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/carboTv"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:text="Karbohidrat"
+            app:layout_constraintStart_toStartOf="@id/priceMenu"
+            app:layout_constraintTop_toBottomOf="@id/priceMenu"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/proteinTv"
+            android:text="Protein"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/carboTv"
+            app:layout_constraintTop_toTopOf="@id/carboTv"
+            app:layout_constraintBottom_toBottomOf="@id/carboTv"
+            app:layout_constraintEnd_toStartOf="@id/btnUpdate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/carboMenu"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:text="0"
+            app:layout_constraintStart_toStartOf="@id/carboTv"
+            app:layout_constraintEnd_toEndOf="@id/carboTv"
+            app:layout_constraintTop_toBottomOf="@id/carboTv"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/proteinMenu"
+            android:text="0"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/proteinTv"
+            app:layout_constraintEnd_toEndOf="@id/proteinTv"
+            app:layout_constraintTop_toBottomOf="@id/proteinTv"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDelete"
+            android:src="@drawable/ic_baseline_delete_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="16dp"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUpdate"
+            android:src="@drawable/ic_baseline_edit_24"
+            app:layout_constraintTop_toTopOf="@id/btnDelete"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            app:layout_constraintBottom_toBottomOf="@id/btnDelete"
+            android:layout_margin="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

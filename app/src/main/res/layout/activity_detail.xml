@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:padding="8dp">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:id="@+id/photoMenu"
+        android:src="@drawable/ic_baseline_restaurant_menu_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameMenu"
+        android:text="Menu Name"
+        app:layout_constraintTop_toBottomOf="@id/photoMenu"
+        android:textSize="26sp"
+        android:textColor="@color/purple_700"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/priceMenu"
+        android:text="Price"
+        android:textSize="22sp"
+        android:textColor="@color/purple_200"
+        app:layout_constraintTop_toBottomOf="@id/nameMenu"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/nameMenu"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbTV"
+        android:text="Karbohidrat  :"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/priceMenu"
+        app:layout_constraintTop_toBottomOf="@id/priceMenu"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ptTV"
+        app:layout_constraintStart_toStartOf="@id/cbTV"
+        app:layout_constraintTop_toBottomOf="@id/cbTV"
+        android:text="Protein          :"
+        android:textColor="@color/black"
+        android:layout_marginStart="1dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/carboMenu"
+        android:text="0"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/cbTV"
+        app:layout_constraintTop_toTopOf="@id/cbTV"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/proteinMenu"
+        android:textColor="@color/black"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@id/carboMenu"
+        app:layout_constraintTop_toTopOf="@id/ptTV"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAdd"
+        android:text="Add to Cart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ptTV"
+        android:layout_marginTop="30dp"
+        app:cornerRadius="8dp"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

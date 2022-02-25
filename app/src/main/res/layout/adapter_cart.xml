@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:strokeColor="#999"
+    app:strokeWidth="1dp"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/imgMenu"
+            android:src="@drawable/ic_baseline_restaurant_menu_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameMenu"
+            android:text="Menu Name"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/imgMenu"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/priceMenu"
+            android:textSize="16sp"
+            android:textColor="@color/purple_200"
+            android:text="Price"
+            app:layout_constraintStart_toStartOf="@id/nameMenu"
+            app:layout_constraintTop_toBottomOf="@id/nameMenu"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="qty     "
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/priceMenu"
+            app:layout_constraintStart_toStartOf="@id/priceMenu"
+            android:id="@+id/qtyMenu"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pcsTV"
+            android:text="pcs"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/qtyMenu"
+            app:layout_constraintTop_toTopOf="@id/qtyMenu"
+            app:layout_constraintBottom_toBottomOf="@id/qtyMenu"
+            android:layout_marginStart="8dp"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_highlight_off_24"
+            app:tint="@color/black"
+            android:id="@+id/btnDelete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
